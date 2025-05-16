@@ -1,0 +1,22 @@
+package com.limj0009.receiptprocessor.Model;
+import jakarta.validation.constraints.Pattern;
+
+public class Item {
+    @Pattern(regexp = "^[\\w\\s\\-]+$")
+    private String shortDescription;
+    @Pattern(regexp = "^\\\\d+\\\\.\\\\d{2}$")
+    private String price;
+
+    public String getShortDescription() {
+        return shortDescription;
+    }
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
+    }
+    public String getPrice() {
+        return price;
+    }
+    public void setPrice(String price) {
+        this.price = price;
+    }
+}
