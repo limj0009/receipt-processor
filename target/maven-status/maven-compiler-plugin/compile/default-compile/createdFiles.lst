@@ -1,7 +1,0 @@
-com\limj0009\receiptprocessor\Model\Receipt.class
-com\limj0009\receiptprocessor\Model\Item.class
-com\limj0009\receiptprocessor\Service\ReceiptService.class
-com\limj0009\receiptprocessor\Controller\ReceiptController.class
-com\limj0009\receiptprocessor\Handler\Handler.class
-com\limj0009\receiptprocessor\ReceiptProcessorApplication.class
-com\limj0009\receiptprocessor\Repository\ReceiptRepository.class
