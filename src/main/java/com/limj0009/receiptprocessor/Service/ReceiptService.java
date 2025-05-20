@@ -3,6 +3,7 @@ package com.limj0009.receiptprocessor.Service;
 import com.limj0009.receiptprocessor.Model.Item;
 import com.limj0009.receiptprocessor.Model.Receipt;
 import com.limj0009.receiptprocessor.Repository.ReceiptRepository;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -10,17 +11,17 @@ import java.time.LocalTime;
 import java.util.List;
 
 import static java.util.UUID.randomUUID;
-
+@Service
 public class ReceiptService {
     private ReceiptRepository receiptRepository;
     public ReceiptService(ReceiptRepository receiptRepository) {
         this.receiptRepository = receiptRepository;
     }
 
-    public void processReceipt(Receipt receipt) {
-        String price = receipt.getTotal();
+    public String processReceipt(Receipt receipt) {
         String id = randomUUID().toString();
         receiptRepository.saveReceipt(id, receipt);
+        return id;
     }
 
     public Integer getPoints(String id) {

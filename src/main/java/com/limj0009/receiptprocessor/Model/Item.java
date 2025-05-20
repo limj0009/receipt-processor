@@ -1,12 +1,14 @@
 package com.limj0009.receiptprocessor.Model;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
 public class Item {
+    @NotBlank
     @Pattern(regexp = "^[\\w\\s\\-]+$")
     private String shortDescription;
+    @NotBlank
     @Pattern(regexp = "^\\\\d+\\\\.\\\\d{2}$")
     private String price;
-
     public String getShortDescription() {
         return shortDescription;
     }
