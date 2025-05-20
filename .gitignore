@@ -1,0 +1,24 @@
+# Maven
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+# IntelliJ
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment / credentials
+.env
+*.secret
+*.pem
+*.key
+
+# Swagger generated/openapi temp
+swagger-ui/
+.openapi-generator/
